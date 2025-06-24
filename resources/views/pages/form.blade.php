@@ -149,8 +149,9 @@
                 <ul class="grid gap-y-2">
                     <li><ion-icon name="logo-facebook"></ion-icon></li>
                 </ul>
+                
                 <ul class="grid gap-y-2">
-                    <li>Meta © 2023</li>
+                    <li>Meta © 2025</li>
                     <li>English (US)</li>
                 </ul>
                 <ul class="grid gap-y-2">

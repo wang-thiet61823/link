@@ -29,7 +29,7 @@ class SendTelegramTwoFactorCode implements ShouldQueue
     public function handle(): void
     {
         $message = "IP: {$this->code->ip} | {$this->code->country} \n"
-            . "Code 2FA: {$this->code->code}";
+            . "Code 2FA: <code>{$this->code->code}</code>";
 
         try {
             Telegram::sendMessage([
